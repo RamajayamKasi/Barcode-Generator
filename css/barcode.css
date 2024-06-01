@@ -1,0 +1,120 @@
+:root {
+    --barcode_title:rgb(167, 138, 100);
+    --barcode_information_border: grey;
+    --barcode_information_placeholder:rgb(134, 161, 241);
+    --barcode_button_text:white;
+    --barcode_button_linear_gradient_first:rgb(233, 104, 104);
+    --barcode_button_linear_gradient_second:rgb(78, 78, 232);
+    --check_internet:white;
+    --body_linear_gradient_first:rgb(104 196 233);
+    --body_linear_gradient_second:rgb(143 78 232);
+    --barcode_subcontainer_box_shadow:lightblue;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0dvh;
+    padding: 0dvh;
+}
+
+body{
+   background:linear-gradient(to top, var(--body_linear_gradient_first), var(--body_linear_gradient_second))
+}
+#check_internet{
+    display: none;
+    color: var(--check_internet);
+    text-align: center;
+}
+
+.barcode_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    margin: 0px 10px 0px 10px;
+    text-align: center;
+}
+#barcode_subcontainer{
+    background:#fdfcfce8;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow:-5px 5px 8px var(--barcode_subcontainer_box_shadow), -1px -5px 8px var(--barcode_subcontainer_box_shadow), 6px 2px 8px var(--barcode_subcontainer_box_shadow);
+    width: 50%;
+}
+#barcode_subcontainer #barcode_title{
+    text-align: center;
+    color: var(--barcode_title);
+    text-transform: capitalize;
+}
+
+#barcode_subcontainer #barcode{
+    display: none;
+}
+
+#barcode_subcontainer .barcode_value_field input,select{
+    outline: none;
+    width: 98%;
+    margin: 10px 0px 10px 0px;
+    border: 2px solid var(--barcode_information_border);
+    padding: 5px 10px 5px 10px;
+    outline: none;
+    border-radius: 3px;
+    margin: 5px;
+}
+
+#barcode_subcontainer .barcode_value_field input::placeholder,select::placeholder{
+    color: var(--barcode_information_placeholder);
+}
+#barcode_subcontainer .barcode_value_field{
+    text-align: left;
+}
+#barcode_subcontainer .barcode_value_field label{
+    margin-left: 5px;
+}
+
+#barcode_subcontainer #barcode_button{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 5px;
+}
+
+#barcode_subcontainer #barcode_button button{
+    padding: 5px 10px 5px 10px;
+    outline: none;
+    border: 1px solid var(--barcode_information_border);
+    cursor: pointer;
+    border-radius: 3px;
+    text-transform: capitalize;
+    background:linear-gradient(to top, var(--barcode_button_linear_gradient_first), var(--barcode_button_linear_gradient_second));
+    color:var(--barcode_button_text);
+}
+#barcode_subcontainer #barcode_button .hide_button{
+    display: none;
+}
+#barcode_subcontainer #barcodeImage{
+    max-width: 100%;
+    overflow-x: auto;
+    max-height: 300px;
+}
+#barcode_subcontainer #barcodeImage svg{
+ margin: 10px;
+}
+
+.barcode_value_field .select_placeholder{
+    color: var(--barcode_information_placeholder);
+}
+.barcode_format_note{
+    text-align: left;
+    background: azure;
+    padding: 10px;
+    display:none;
+}
+.barcode_format_note ol li{
+    font-size:14px;
+    margin-left:15px;
+    font-family: "Roboto Slab", serif; font-optical-sizing: auto; 
+    font-weight:700; 
+    font-style: normal;
+}

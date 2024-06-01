@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/barcode.css">
+    <link rel="stylesheet" href="css/font_style.css">
+    <link rel="icon" href="image/barcode_icon.jpg" type="image/jpg">
+    <title>Barcode Generate</title>
+</head>
+<body>
+    <h1 id="check_internet">No Internet Connection</h1>
+    <div class="barcode_container">
+        <div id="barcode_subcontainer">
+            <h2 id="barcode_title">Generate Barcode</h2>
+            <div id="barcodeImage">
+                <svg id="barcode"></svg>
+            </div>
+
+            <div class="barcode_value_field">
+                <label for="barcode_create_type">Barcode Create Type:
+                    <select name="" id="barcode_create_type">
+                        <option value="" class="select_placeholder">Select Create Type</option>
+                        <option value="new">New</option>
+                        <option value="random">Random</option>                    
+                    </select>
+                </label>
+                <label for="barcode_type">Barcode Type :
+                    <select name="barcode_type" id="barcode_type">
+                        <option value="" class="select_placeholder">Select Barcode Type</option>
+                        <option value="UPC">UPC-A</option>
+                        <option value="CODE128">CODE128</option>
+                        <option value="CODE39">CODE39</option>
+                        <option value="EAN13">EAN-13</option>
+                        <option value="EAN8">EAN-8</option>
+                        <option value="EAN5">EAN-5</option>
+                        <option value="EAN2">EAN-2</option>
+                        <option value="ITF">ITF</option>
+                        <option value="ITF14">ITF-14</option>
+                        <option value="MSI">MSI</option>
+                        <option value="MSI10">MSI10</option>
+                        <option value="MSI11">MSI11</option>
+                        <option value="MSI1010">MSI1010</option>
+                        <option value="MSI1110">MSI1110</option>
+                    </select>
+                </label>
+                <label for="barcode_name" class="hide_label">Barcode Name :
+                    <input type="text" id="barcode_name" name="barcode_name" placeholder="Enter the barcode name.">
+                </label>
+                <label for="barcode_data" class="hide_label" style="display:none;">Barcode Data :
+                    <input type="text" id="barcode_data" name="barcode_data" placeholder="Enter the barcode data.">
+                </label>
+                <label for="number_of_barcode">Number of Barcodes :
+                    <input type="number" value="1" id="number_of_barcode" name="number_of_barcode" placeholder="Enter the number barcode.">
+                </label>
+            </div>
+            <div class="barcode_format_note">
+                <h3>Note:</h3>
+                <ol style="text-indent: 40px;">
+                    <li>1.sdfhsdjf</li>
+                </ol>
+            </div>
+            <div id="barcode_button">
+                <button id="btn_back" class="hide_button">Back</button>
+                <button id="btn_generate_barcode" >generate</button>
+                <button id="btn_reset_field" >reset</button>
+                <button id="btn_download_pdf" class="hide_button" barcode_download_type="pdf"><i class="fa fa-download" aria-hidden="true"></i> download PDF</button>
+                <button id="btn_download_image" class="hide_button" barcode_download_type="image"><i class="fa fa-download" aria-hidden="true"></i> download Image</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="library/jquery.js"></script>
+<script src="library/swal.js"></script>
+<script src="js/JsBarcode.all.min.js"></script>
+<script src="js/barcode_type_details.js"></script>
+<script src="js/barcode.js"></script>
+</html>
