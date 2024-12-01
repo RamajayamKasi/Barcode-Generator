@@ -19,7 +19,6 @@
 
 body{
     background:url('../image/barcode_Background.jpg');
-    background:linear-gradient(to top, var(--body_linear_gradient_first), var(--body_linear_gradient_second))
 }
 #check_internet{
     display: none;
